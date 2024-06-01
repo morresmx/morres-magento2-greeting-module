@@ -23,7 +23,10 @@ class Index extends Action
 
     public function execute()
     {
-        $greetingMessage = $this->scopeConfig->getValue('greeting_section/general/greeting_message', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+        $greetingMessage = $this->scopeConfig->getValue(
+            'greeting_section/general/greeting_message',
+            \Magento\Store\Model\ScopeInterface::SCOPE_STORE
+        );
         $resultPage = $this->resultPageFactory->create();
         $resultPage->getLayout()->getBlock('greeting')->setData('greeting_message', $greetingMessage);
         return $resultPage;
