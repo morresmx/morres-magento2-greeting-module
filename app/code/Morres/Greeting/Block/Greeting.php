@@ -19,6 +19,9 @@ class Greeting extends Template
 
     public function getGreetingMessage()
     {
-        return $this->scopeConfig->getValue('greeting_section/general/greeting_message', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+        return $this->scopeConfig->getValue(
+            'greeting_section/general/greeting_message',
+            \Magento\Store\Model\ScopeInterface::SCOPE_STORE
+        );
     }
 }
