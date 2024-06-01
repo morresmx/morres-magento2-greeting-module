@@ -29,6 +29,7 @@ class Index extends Action
         );
         $resultPage = $this->resultPageFactory->create();
         $resultPage->getLayout()->getBlock('greeting')->setData('greeting_message', $greetingMessage);
+        
         return $resultPage;
     }
 }
